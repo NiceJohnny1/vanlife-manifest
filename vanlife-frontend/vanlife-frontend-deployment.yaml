@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vanlife-frontend
+spec:
+  selector:
+    matchLabels:
+      app: vanlife-frontend
+  template:
+    metadata:
+      labels:
+        app: vanlife-frontend
+    spec:
+      containers:
+        - name: vanlife-frontend
+          image: nicejohnny1/vanlife-frontend:1.0
+          ports:
+            - containerPort: 80
